@@ -25,14 +25,11 @@
     </h2>
     
 </div>
-
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
     
     <input type=hidden name="orgid" value="00DIY000000Atqy">
-    <input type=hidden name="retURL" value="https://creative-raccoon-q3yv2g-dev-ed.lightning.force.com">
+    <input type=hidden name="retURL" value="http://127.0.0.1:5500/AirlineDomain/index.html">
     
     <div class="fila-label">
         <label for="name">Contact Name</label>
@@ -67,11 +64,25 @@
 
 
     <div class="fila-input">
-        <input class="input-size" id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+        <!-- <input class="input-size" id="subject" maxlength="80" name="subject" size="20" type="text" /><br> -->
+       <select class="input-size" name="subject" id="subject">
+           <optgroup label="Select Case Reason">
+               <option selected value="Case Reason"> Other </option>
+               <option value="Feedback">Feedback</option>
+               <option value="Baggage Lost">Baggage Lost</option>
+               <option value="Refund Request">Refund Request</option>
+               <option value="Cabin Crew Service">Cabin Crew Service</option>
+               <option value="Quality Food">Quality Food</option>
+               <option value="Inflight Internet">Inflight Internet</option>
+            </optgroup>
+
+       </select>
     </div>
 
+    
+
     <div class="fila-label">
-        <label for="description">Description</label>
+        <label for="description"  >Description</label>
     </div>
 
 
@@ -81,7 +92,7 @@
 
     <br>
 
-    <input class="button-submit" type="submit" name="submit">
+    <input class="button-submit" onclick="caseSubmit()" type="submit" name="submit">
     
     </form>
 
@@ -90,8 +101,8 @@
 
 
 <footer></footer>
-    
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
 
