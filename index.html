@@ -26,10 +26,11 @@
     
 </div>
     
+    <!-- <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST"> -->
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
     
-    <input type=hidden name="orgid" value="00DIY000000Atqy">
-    <input type=hidden name="retURL" value="https://luisreyesbaez.github.io/AirlineDomain/">
+        <input type=hidden name="orgid" value="00D8b000002buHO">
+        <input type=hidden name="retURL" value="https://luisreyesbaez.github.io/AirlineDomain/">
     
     <div class="fila-label">
         <label for="name">Contact Name</label>
@@ -55,17 +56,17 @@
 
 
     <div class="fila-input">
-        <input  class="input-size" id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+        <input class="input-size"  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
     </div>
     
     <div class="fila-label">
-        <label for="subject">Subject</label>
+        <label for="subject">Case Reason</label>
     </div>
 
 
     <div class="fila-input">
         <!-- <input class="input-size" id="subject" maxlength="80" name="subject" size="20" type="text" /><br> -->
-       <select class="input-size" name="subject" id="subject">
+       <!-- <select class="input-size" name="subject" id="subject">
            <optgroup label="Select Case Reason">
                <option selected value="Case Reason"> Other </option>
                <option value="Feedback">Feedback</option>
@@ -76,7 +77,23 @@
                <option value="Inflight Internet">Inflight Internet</option>
             </optgroup>
 
+       </select> -->
+       <select class="input-size" id="type" name="type">
+        <option value="">--None--</option>
+        <option value="Baggage Loss">Baggage Loss</option>
+        <option value="Cabin Crew Service">Cabin Crew Service</option>
+        <option value="Quality of Food">Quality of Food</option>
+        <option value="Inflight Internet">Inflight Internet</option>
        </select>
+    </div>
+
+    <div class="fila-label">
+        <label for="subject">Subject</label>
+    </div>
+
+    <div class="fila-input">
+        <input class="input-size" id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
     </div>
 
     
